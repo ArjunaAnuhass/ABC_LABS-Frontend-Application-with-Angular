@@ -1,6 +1,7 @@
 <mat-toolbar *ngIf="!authService.roleMatch('ADMIN') && !authService.roleMatch('USER') && !authService.roleMatch('TECHNICIAN')" color="primary" class="navbar">
   <span class="navbar-brand">ABC LABS</span>
   <span class="spacer"></span>
+  <button mat-button routerLink="/home" routerLinkActive="active">Home</button>
   <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
   <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
 </mat-toolbar>
@@ -11,12 +12,17 @@
   <span class="spacer"></span>
   <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
   <button mat-button routerLink="/admin/viewTechnician" routerLinkActive="active">Technician</button>
+  <button mat-button routerLink="/admin/viewAllDoctors" routerLinkActive="active">Doctors</button>
+  <button mat-button routerLink="/admin/viewPatient" routerLinkActive="active">Patient</button>  
   <button mat-button routerLink="/admin/postTest" routerLinkActive="active">Add Test</button>
   <button mat-button routerLink="/admin/postTechnician" routerLinkActive="active">Add Technician</button>
   <button mat-button routerLink="/admin/postPatient" routerLinkActive="active">Add Patient</button>
+  <button mat-button routerLink="/admin/postDoctor" routerLinkActive="active">Add Doctor</button>
   <button mat-button routerLink="/admin/viewAllAppointments" routerLinkActive="active">View Appointments</button>
-  <button mat-button routerLink="/admin/viewUsers" routerLinkActive="active">View Users</button>
+  <button mat-button routerLink="/admin/viewAllUsers" routerLinkActive="active">View Users</button>
   <button mat-button routerLink="/admin/viewTestResults" routerLinkActive="active">Test Results</button>
+  <!-- <button mat-button routerLinkActive="active" (click)="logout()">Logout</button> -->
+
 </mat-toolbar>
 
 

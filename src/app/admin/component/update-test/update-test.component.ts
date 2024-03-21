@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
 import { AdminServiceService } from '../../service/admin-service.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { response } from 'express';
 
 @Component({
-  selector: 'app-post-test',
-  templateUrl: './post-test.component.html',
-  styleUrl: './post-test.component.css'
+  selector: 'app-update-test',
+  templateUrl: './update-test.component.html',
+  styleUrl: './update-test.component.css'
 })
-export class PostTestComponent {
+export class UpdateTestComponent {
+
+  testId = this.activatedRoute.snapshot.params['testId'];
 
   testForm: FormGroup;
   listOfTechnicians: any = [];
@@ -19,6 +22,7 @@ export class PostTestComponent {
     private router: Router,
     private snackbar: MatSnackBar,
     private adminService: AdminServiceService,
+    private activatedRoute: ActivatedRoute
   ) {
 
   }
@@ -34,6 +38,7 @@ export class PostTestComponent {
     });
 
     this.getAllTechnicians();
+    this.getTestById();
   }
 
   getAllTechnicians(){
@@ -42,7 +47,13 @@ export class PostTestComponent {
     })
   }
 
-  addTest(){
+  getTestById(){
+    this.adminService.getAllTestById(this.testId).subscribe(res => {
+      this.testForm.patchValue(res);
+    })
+  }
+
+  updateProduct(){
     if(this.testForm.valid){
       const formData: FormData = new FormData();
       
@@ -51,14 +62,14 @@ export class PostTestComponent {
       formData.append('description', this.testForm.get('description').value);
       formData.append('price', this.testForm.get('price').value);
 
-      this.adminService.postTest(formData).subscribe(
+      this.adminService.updateTest(this.testId, formData).subscribe(
         (res) => {
           if(res.testId != null){
-            this.snackbar.open("Test Created Successfully.", 'Close', { duration: 5000 });
+            this.snackbar.open("Test Updated Successfully.", 'Close', { duration: 5000 });
             this.router.navigateByUrl('/admin/dashboard');
           }
           else{
-            this.snackbar.open("Fail to add Test!", 'Close', { duration: 5000 });
+            this.snackbar.open("Fail to Update Test!", 'Close', { duration: 5000 });
           }
         }
       )

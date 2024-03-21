@@ -1,7 +1,7 @@
 <div class="container">
-    <h2>Add Test</h2>
+    <h2>Update Test</h2>
 
-    <form [formGroup]="testForm" (ngSubmit)="addTest()">
+    <form [formGroup]="testForm" (ngSubmit)="updateProduct()">
 
         <mat-form-field appearance="outline" class="form-field">
             <mat-label>Select a Technician</mat-label>
@@ -35,6 +35,6 @@
             <mat-error *ngIf="testForm.get('price')?.hasError('required')">This input is required</mat-error>
         </mat-form-field>
 
-        <button mat-raised-button color="primary" type="submit">Add Test</button>
+        <button mat-raised-button color="primary" type="submit">Update Test</button>
     </form>
 </div>

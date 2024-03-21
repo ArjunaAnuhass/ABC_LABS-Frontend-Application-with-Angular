@@ -1,1 +1,44 @@
-<p>view-all-appointments works!</p>
+
+
+
+<div class="mat-elevation-z8" style="padding: 5rem;">
+
+    <h2 style="text-align: center; font-weight: 700; font-size: 2rem;">All Appointments</h2>
+    <table mat-table [dataSource]="appointmentss">
+  
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID. </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.id}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="appointmentName">
+        <th mat-header-cell *matHeaderCellDef> Appointment Name </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.appointmentName}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="patientName">
+        <th mat-header-cell *matHeaderCellDef> Patient Name </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.patientName}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="appointmentDate">
+        <th mat-header-cell *matHeaderCellDef> Appointment Date </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.appointmentDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="testName">
+        <th mat-header-cell *matHeaderCellDef> Test Name </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.testName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="appointmentCode">
+        <th mat-header-cell *matHeaderCellDef> Appointment Code </th>
+        <td mat-cell *matCellDef="let appointments"> {{appointments.appointmentCode}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode']"></tr>
+    </table>
+  
+  </div>
+  

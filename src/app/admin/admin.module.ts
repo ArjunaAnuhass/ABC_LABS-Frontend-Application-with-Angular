@@ -11,6 +11,16 @@ import { ViewTechnicianComponent } from './component/view-technician/view-techni
 import { ViewAllUsersComponent } from './component/view-all-users/view-all-users.component';
 import { ViewTestResultsComponent } from './component/view-test-results/view-test-results.component';
 import { ViewAllAppointmentsComponent } from './component/view-all-appointments/view-all-appointments.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DemoAngularMaterialModule } from '../DemoAngularMaterialModule';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { UpdateTestComponent } from './component/update-test/update-test.component';
+import { UpdateUserComponent } from './component/update-user/update-user.component';
+import { PostDoctorComponent } from './component/post-doctor/post-doctor.component';
+import { ViewDoctorsComponent } from './component/view-doctors/view-doctors.component';
+import { ViewPatientComponent } from './component/view-patient/view-patient.component';
 
 
 @NgModule({
@@ -23,11 +33,22 @@ import { ViewAllAppointmentsComponent } from './component/view-all-appointments/
     ViewTechnicianComponent,
     ViewAllUsersComponent,
     ViewTestResultsComponent,
-    ViewAllAppointmentsComponent
+    ViewAllAppointmentsComponent,
+    UpdateTestComponent,
+    UpdateUserComponent,
+    PostDoctorComponent,
+    ViewDoctorsComponent,
+    ViewPatientComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    DemoAngularMaterialModule,
+    MatTableModule,
+    MatPaginatorModule,
   ]
 })
 export class AdminModule { }

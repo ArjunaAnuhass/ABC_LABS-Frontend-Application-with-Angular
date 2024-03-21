@@ -16,4 +16,15 @@ export class AppComponent {
     private userStorageService: UserStorageService,
     private router: Router,
   ){}
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.logout();
+  }
+
+  logout() {
+    this.userStorageService.clear();
+    this.router.navigateByUrl('/home');
+  }
 }

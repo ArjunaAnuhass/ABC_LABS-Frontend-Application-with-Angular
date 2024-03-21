@@ -1,1 +1,43 @@
-<p>post-technician works!</p>
+<div class="container">
+    <h2>Add Technician</h2>
+
+    <form [formGroup]="technicianForm" (ngSubmit)="addTechnician()">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" placeholder="Name" formControlName="firstname">
+
+            <mat-error *ngIf="technicianForm.get('firstname')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" placeholder="Lastname" formControlName="lastname">
+
+            <mat-error *ngIf="technicianForm.get('lastname')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="technicianForm.get('email')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" placeholder="phone" formControlName="phone">
+
+            <mat-error *ngIf="technicianForm.get('phone')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Specialization</mat-label>
+            <input matInput type="text" placeholder="Specialization" formControlName="specialization">
+
+            <mat-error *ngIf="technicianForm.get('specialization')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Technician</button>
+    </form>
+</div>

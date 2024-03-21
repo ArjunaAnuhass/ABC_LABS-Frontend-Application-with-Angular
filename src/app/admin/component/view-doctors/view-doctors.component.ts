@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { AdminServiceService } from '../../service/admin-service.service';
-import { response } from 'express';
 
 @Component({
-  selector: 'app-view-technician',
-  templateUrl: './view-technician.component.html',
-  styleUrl: './view-technician.component.css'
+  selector: 'app-view-doctors',
+  templateUrl: './view-doctors.component.html',
+  styleUrl: './view-doctors.component.css'
 })
-export class ViewTechnicianComponent {
+export class ViewDoctorsComponent {
 
-  technicians: any;
-
+  doctors: any;
 
   constructor (
     private adminService: AdminServiceService,
@@ -19,14 +17,15 @@ export class ViewTechnicianComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.getAllTechnician();
+    this.viewAllDoctors();
   }
 
-
-  getAllTechnician(){
-    this.adminService.getAllTechnician().subscribe(response =>{
-      this.technicians = response;
+  viewAllDoctors(){
+    this.adminService.getAllDoctors().subscribe(res => {
+      this.doctors = res;
     })
   }
+
+
 
 }

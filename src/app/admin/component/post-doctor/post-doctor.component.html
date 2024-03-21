@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Add Doctor</h2>
+
+    <form [formGroup]="doctorForm" (ngSubmit)="addDoctor()">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text" placeholder="Full Name" formControlName="fullname">
+
+            <mat-error *ngIf="doctorForm.get('fullname')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="doctorForm.get('email')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" placeholder="phone" formControlName="phone">
+
+            <mat-error *ngIf="doctorForm.get('phone')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Specialization</mat-label>
+            <input matInput type="text" placeholder="Specialization" formControlName="specialization">
+
+            <mat-error *ngIf="doctorForm.get('specialization')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Add Doctor</button>
+    </form>
+</div>
