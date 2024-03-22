@@ -1,0 +1,31 @@
+<form [formGroup]="searchAppointmentForm" class="search-form" (submit)="submitForm()">
+    <mat-form-field appearance="outline" class="search-input">
+        <mat-label>Enter keyword to search</mat-label>
+        <input matInput formControlName="title">
+
+        <button mat-button matSuffix color="primary" [disabled]="searchAppointmentForm.invalid">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+</form>
+
+
+<div class="app-list">
+
+    <mat-card class="example-card" *ngFor="let appointments of appointmentss">
+        <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title>Appointment Name: {{appointments.appointmentName}}</mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-subtitle>Patient Name: {{appointments.patientName}}</mat-card-subtitle>
+            <mat-divider></mat-divider>
+            <mat-card-subtitle>Date: {{appointments.appointmentDate}}</mat-card-subtitle>
+            <mat-card-subtitle>Test Name: {{appointments.testName}}</mat-card-subtitle>
+            <mat-divider></mat-divider>
+        </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>Appointment Code: {{appointments.appointmentCode}}</mat-card-content>
+    </mat-card>
+
+</div>
+  

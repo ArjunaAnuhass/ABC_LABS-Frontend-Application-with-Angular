@@ -21,6 +21,7 @@ import { UpdateUserComponent } from './component/update-user/update-user.compone
 import { PostDoctorComponent } from './component/post-doctor/post-doctor.component';
 import { ViewDoctorsComponent } from './component/view-doctors/view-doctors.component';
 import { ViewPatientComponent } from './component/view-patient/view-patient.component';
+import { UpdateAppointmentComponent } from './component/update-appointment/update-appointment.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { ViewPatientComponent } from './component/view-patient/view-patient.comp
     UpdateUserComponent,
     PostDoctorComponent,
     ViewDoctorsComponent,
-    ViewPatientComponent
+    ViewPatientComponent,
+    UpdateAppointmentComponent
   ],
   imports: [
     CommonModule,

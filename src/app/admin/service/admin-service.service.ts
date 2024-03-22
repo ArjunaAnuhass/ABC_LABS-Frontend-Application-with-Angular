@@ -43,7 +43,7 @@ export class AdminServiceService {
   }
 
   getAllAppointmentResults(): Observable<any>{
-    return this.http.get(BASIC_URL + "api/v1/results/getAllAppointmentResults", { headers: this.requestHeader });
+    return this.http.get(BASIC_URL + "api/v1/results/getAllResults", { headers: this.requestHeader });
   }
 
   getAllUsers(): Observable<any>{
@@ -63,6 +63,8 @@ export class AdminServiceService {
       return this.http.put(BASIC_URL + `api/v1/test/updateTest/${testId}`, testDto, { headers: this.requestHeader});
     }
 
+    //end update test
+
     postDoctor(doctorDto: any): Observable<any>{
       return this.http.post(BASIC_URL + "api/v1/doctor/addDoctor", doctorDto, { headers: this.requestHeader });
     }
@@ -78,6 +80,12 @@ export class AdminServiceService {
 
     getAllPatients(): Observable<any>{
       return this.http.get(BASIC_URL + "api/v1/patient/getAllPatients", { headers: this.requestHeader });
+    }
+
+    //updateAppointmet
+
+    getAllAppointmentById(appointmentId): Observable<any>{
+      return this.http.get(BASIC_URL + `api/v1/appointment/getAppointmentById/${appointmentId}`, { headers: this.requestHeader });
     }
 
 

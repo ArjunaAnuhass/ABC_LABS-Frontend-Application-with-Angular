@@ -1,0 +1,41 @@
+
+.app-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    min-height: 25vh;
+    padding: 20px;
+
+    .example-card {
+        display: flex;
+        max-width: 400px;
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+
+}
+
+.search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    .search-input{
+        width: 300px;
+        margin-right: 15px;
+
+        input{
+            padding-right: 40px;
+        }
+
+        button{
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+  
