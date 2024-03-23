@@ -8,13 +8,15 @@ import { DemoAngularMaterialModule } from '../DemoAngularMaterialModule';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientDashboardComponent } from './components/patient-dashboard/patient-dashboard.component';
+import { ViewTestComponent } from './components/view-test/view-test.component';
 
 
 @NgModule({
   declarations: [
     PatientComponent,
     PostAppointmentComponent,
-    PatientDashboardComponent
+    PatientDashboardComponent,
+    ViewTestComponent
   ],
   imports: [
     CommonModule,

@@ -16,6 +16,7 @@ import { ViewPatientComponent } from './component/view-patient/view-patient.comp
 import { UpdateAppointmentComponent } from './component/update-appointment/update-appointment.component';
 import { UpdateUserComponent } from './component/update-user/update-user.component';
 import { UpdatePatientComponent } from './component/update-patient/update-patient.component';
+import { UpdateDoctorComponent } from './component/update-doctor/update-doctor.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'viewPatient', component: ViewPatientComponent},
   { path: 'updateUser/:id', component: UpdateUserComponent},
   { path: 'updatePatient/:id', component: UpdatePatientComponent},
+  { path: 'updateDoctor/:id', component: UpdateDoctorComponent},
 ];
 
 @NgModule({

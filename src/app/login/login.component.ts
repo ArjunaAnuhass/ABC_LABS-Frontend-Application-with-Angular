@@ -56,17 +56,20 @@ export class LoginComponent {
         const role = response.role;
         if(role === 'ADMIN'){
           this.router.navigateByUrl('admin/dashboard');
+          this.snackbar.open('Admin Login Success', 'Ok', { duration: 5000});
         }
         else if(role === 'USER'){
           this.router.navigateByUrl('patient');
+          this.snackbar.open('Patient Login Success', 'Ok', { duration: 5000});
         }
         else if(role === 'TECHNICIAN'){
           this.router.navigateByUrl('technician');
+          this.snackbar.open('Technician Login Success', 'Ok', { duration: 5000});
         }
         else{
           this.router.navigateByUrl('/home');
         }
-        this.snackbar.open('Login Success', 'Ok', { duration: 5000});
+        
 
       },
       (error)=> {
