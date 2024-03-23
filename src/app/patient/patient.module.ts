@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientDashboardComponent } from './components/patient-dashboard/patient-dashboard.component';
 import { ViewTestComponent } from './components/view-test/view-test.component';
 import { ViewDoctorComponent } from './components/view-doctor/view-doctor.component';
+import { ViewPatientComponent } from './components/view-patient/view-patient.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ViewDoctorComponent } from './components/view-doctor/view-doctor.compon
     PostAppointmentComponent,
     PatientDashboardComponent,
     ViewTestComponent,
-    ViewDoctorComponent
+    ViewDoctorComponent,
+    ViewPatientComponent
   ],
   imports: [
     CommonModule,
