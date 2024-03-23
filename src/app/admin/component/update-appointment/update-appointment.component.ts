@@ -71,33 +71,5 @@ export class UpdateAppointmentComponent {
     }
   }
 
-  // addAppointment(){
-  //   if(this.appointmentForm.valid){
-  //     const formData: FormData = new FormData();
-      
-  //     formData.append('appointmentName', this.appointmentForm.get('appointmentName').value);
-  //     formData.append('patientName', this.appointmentForm.get('patientName').value);
-  //     formData.append('appointmentDate', this.appointmentForm.get('appointmentDate').value);
-  //     formData.append('testName', this.appointmentForm.get('testName').value);
-
-  //     this.adminService.postAppointment(formData).subscribe(
-  //       (res) => {
-  //         if(res.id != null){
-  //           this.snackbar.open("Appointment Created Successfully.", 'Close', { duration: 5000 });
-  //           this.router.navigateByUrl('/admin/dashboard');
-  //         }
-  //         else{
-  //           this.snackbar.open("Fail to add Test!", 'Close', { duration: 5000 });
-  //         }
-  //       }
-  //     )
-  //   }
-  //   else{
-  //     for(const i in this.appointmentForm.controls){
-  //       this.appointmentForm.controls[i].markAsDirty();
-  //       this.appointmentForm.controls[i].updateValueAndValidity();
-  //     }
-  //   }
-  // }
 
 }

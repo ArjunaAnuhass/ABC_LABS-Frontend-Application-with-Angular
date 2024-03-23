@@ -105,6 +105,17 @@ export class AdminServiceService {
     updateUser(id: any, userDto: any): Observable<any>{
       return this.http.put(BASIC_URL + `api/v1/authentication/updateUser/${id}`, userDto, { headers: this.requestHeader });
     }
+    //end
+
+    //update patient
+
+    getAllPatientById(id): Observable<any>{
+      return this.http.get(BASIC_URL + `api/v1/patient/getPatientById/${id}`, { headers: this.requestHeader });
+    }
+
+    updatePatient(id: any, patientDto: any): Observable<any>{
+      return this.http.put(BASIC_URL + `api/v1/patient/updatePatient/${id}`, patientDto, { headers: this.requestHeader });
+    }
 
 
 
