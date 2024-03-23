@@ -32,10 +32,10 @@
       </ng-container>
       
       <ng-container matColumnDef="action">
-        <mat-header-cell *matHeaderCellDef> action </mat-header-cell>
-        <mat-cell *matCellDef="let user">
-          <button mat-raised-button color="accent" class="update-button" [routerLink]="">Update</button>
-        </mat-cell>
+        <th *matHeaderCellDef> action </th>
+        <td *matCellDef="let user">
+          <button mat-raised-button color="accent" class="update-button" [routerLink]="'/admin/updateUser/' + user.id">Update</button>
+        </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="['id', 'firstname', 'lastname', 'email', 'role', 'action']"></tr>

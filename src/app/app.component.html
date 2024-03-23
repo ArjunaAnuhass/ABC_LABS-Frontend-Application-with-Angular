@@ -9,7 +9,7 @@
 
 <mat-toolbar *ngIf="authService.roleMatch('ADMIN')" color="primary" class="navbar">
   <span class="navbar-brand">ABC LABS</span>
-  <span class="spacer"></span>
+  <span class="spacer">Admin Section</span>
   <button mat-button routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</button>
   <button mat-button routerLink="/admin/viewTechnician" routerLinkActive="active">Technician</button>
   <button mat-button routerLink="/admin/viewAllDoctors" routerLinkActive="active">Doctors</button>
@@ -21,7 +21,8 @@
   <button mat-button routerLink="/admin/viewAllAppointments" routerLinkActive="active">View Appointments</button>
   <button mat-button routerLink="/admin/viewAllUsers" routerLinkActive="active">View Users</button>
   <button mat-button routerLink="/admin/viewTestResults" routerLinkActive="active">Test Results</button>
-  <!-- <button mat-button routerLinkActive="active" (click)="logout()">Logout</button> -->
+  <button mat-button *ngIf="! isLoggedIn()" routerLink="/login" routerLinkActive="active">Login</button>
+  <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
 
 </mat-toolbar>
 
@@ -29,7 +30,7 @@
 
 <mat-toolbar *ngIf="authService.roleMatch('USER')" color="primary" class="navbar">
   <span class="navbar-brand">ABC LABS</span>
-  <span class="spacer"></span>
+  <span class="spacer">Patient Section</span>
   <button mat-button routerLink="/patient/postAppointment" routerLinkActive="active">Add Appointment</button>
   <button mat-button routerLink="/patient/patientDashboard" routerLinkActive="active">Dashboard</button>
 </mat-toolbar>
@@ -37,9 +38,10 @@
 
 <mat-toolbar *ngIf="authService.roleMatch('TECHNICIAN')" color="primary" class="navbar">
   <span class="navbar-brand">ABC LABS</span>
-  <span class="spacer"></span>
+  <span class="spacer">Technician Section</span>
   <button mat-button routerLink="/signup" routerLinkActive="active">Register</button>
-  <button mat-button routerLink="/login" routerLinkActive="active">Login</button>
+  <button mat-button *ngIf="! isLoggedIn()" routerLink="/login" routerLinkActive="active">Login</button>
+  <button mat-button routerLinkActive="active" (click)="logout()">Logout</button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>

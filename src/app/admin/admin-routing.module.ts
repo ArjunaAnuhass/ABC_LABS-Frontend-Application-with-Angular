@@ -13,6 +13,8 @@ import { UpdateTestComponent } from './component/update-test/update-test.compone
 import { PostDoctorComponent } from './component/post-doctor/post-doctor.component';
 import { ViewDoctorsComponent } from './component/view-doctors/view-doctors.component';
 import { ViewPatientComponent } from './component/view-patient/view-patient.component';
+import { UpdateAppointmentComponent } from './component/update-appointment/update-appointment.component';
+import { UpdateUserComponent } from './component/update-user/update-user.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'postTechnician', component: PostTechnicianComponent},
   { path: 'postTest', component: PostTestComponent},
   { path: 'postTest/:testId', component: UpdateTestComponent},
+  { path: 'updateAppointment/:id', component: UpdateAppointmentComponent},
   { path: 'postPatient', component: PostPatientComponent},
   { path: 'viewTechnician', component: ViewTechnicianComponent},
   { path: 'viewAllUsers', component: ViewAllUsersComponent},
@@ -28,6 +31,7 @@ const routes: Routes = [
   { path: 'postDoctor', component: PostDoctorComponent},
   { path: 'viewAllDoctors', component: ViewDoctorsComponent},
   { path: 'viewPatient', component: ViewPatientComponent},
+  { path: 'updateUser/:id', component: UpdateUserComponent},
 ];
 
 @NgModule({

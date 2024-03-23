@@ -35,9 +35,16 @@
         <th mat-header-cell *matHeaderCellDef> Appointment Code </th>
         <td mat-cell *matCellDef="let appointments"> {{appointments.appointmentCode}} </td>
       </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th *matHeaderCellDef> Action </th>
+        <td *matCellDef="let appointments">
+          <button mat-raised-button color="accent" class="update-button" [routerLink]="'/admin/updateAppointment/' + appointments.id">Update</button>
+        </td>
+      </ng-container>
   
-      <tr mat-header-row *matHeaderRowDef="['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode']"></tr>
-      <tr mat-row *matRowDef="let row; columns: ['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode']"></tr>
+      <tr mat-header-row *matHeaderRowDef="['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode', 'action']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['id', 'appointmentName', 'patientName', 'appointmentDate', 'testName', 'appointmentCode', 'action']"></tr>
     </table>
   
   </div>

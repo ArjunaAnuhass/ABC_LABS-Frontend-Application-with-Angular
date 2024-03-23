@@ -64,13 +64,13 @@ export class LoginComponent {
           this.router.navigateByUrl('technician');
         }
         else{
-          this.router.navigate(['/home']);
+          this.router.navigateByUrl('/home');
         }
         this.snackbar.open('Login Success', 'Ok', { duration: 5000});
 
       },
       (error)=> {
-        this.snackbar.open('Bad Credentials', 'ERROR', { duration: 5000});
+        this.snackbar.open('Invalid Login Details', 'ERROR', { duration: 5000});
       }
     );
   }

@@ -84,8 +84,26 @@ export class AdminServiceService {
 
     //updateAppointmet
 
-    getAllAppointmentById(appointmentId): Observable<any>{
-      return this.http.get(BASIC_URL + `api/v1/appointment/getAppointmentById/${appointmentId}`, { headers: this.requestHeader });
+    getAllAppointmentById(id): Observable<any>{
+      return this.http.get(BASIC_URL + `api/v1/appointment/getAppointmentById/${id}`, { headers: this.requestHeader });
+    }
+
+    updateAppointment(id: any, appointmentDto: any): Observable<any>{
+      return this.http.put(BASIC_URL + `api/v1/appointment/updateAppointment/${id}`, appointmentDto, { headers: this.requestHeader });
+    }
+
+    postAppointment(appointmentDto: any): Observable<any>{
+      return this.http.post(BASIC_URL + "api/v1/appointment/addAppointment", appointmentDto, { headers: this.requestHeader});
+    }
+
+    //update user
+
+    getAllUsersById(id): Observable<any>{
+      return this.http.get(BASIC_URL + `api/v1/authentication/getUserById/${id}`, { headers: this.requestHeader });
+    }
+
+    updateUser(id: any, userDto: any): Observable<any>{
+      return this.http.put(BASIC_URL + `api/v1/authentication/updateUser/${id}`, userDto, { headers: this.requestHeader });
     }
 
 

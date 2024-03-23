@@ -9,7 +9,7 @@ import { DemoAngularMaterialModule } from './DemoAngularMaterialModule';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { HomeComponent } from './home/home.component';
 
@@ -32,7 +32,8 @@ import { HomeComponent } from './home/home.component';
   ],
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    
   ],
   bootstrap: [AppComponent]
 })
