@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PatientDashboardComponent } from './components/patient-dashboard/patient-dashboard.component';
 import { ViewTestComponent } from './components/view-test/view-test.component';
+import { ViewDoctorComponent } from './components/view-doctor/view-doctor.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ViewTestComponent } from './components/view-test/view-test.component';
     PatientComponent,
     PostAppointmentComponent,
     PatientDashboardComponent,
-    ViewTestComponent
+    ViewTestComponent,
+    ViewDoctorComponent
   ],
   imports: [
     CommonModule,

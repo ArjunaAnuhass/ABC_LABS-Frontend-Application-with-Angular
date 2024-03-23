@@ -5,12 +5,14 @@ import { DashboardComponent } from '../admin/component/dashboard/dashboard.compo
 import { PostAppointmentComponent } from './components/post-appointment/post-appointment.component';
 import { PatientDashboardComponent } from './components/patient-dashboard/patient-dashboard.component';
 import { ViewTestComponent } from './components/view-test/view-test.component';
+import { ViewDoctorComponent } from './components/view-doctor/view-doctor.component';
 
 const routes: Routes = [
   { path: '', component: PatientComponent },
   { path: 'patientDashboard', component: PatientDashboardComponent},
   { path: 'postAppointment', component: PostAppointmentComponent},
   { path: 'viewAllResults', component: ViewTestComponent},
+  { path: 'viewAllDoctors', component: ViewDoctorComponent},
 ];
 
 @NgModule({

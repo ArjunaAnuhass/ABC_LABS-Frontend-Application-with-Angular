@@ -33,5 +33,9 @@ export class PatientService {
     return this.httpClient.get(BASIC_URL + "api/v1/results/getAllResults", { headers: this.requestHeader });
   }
 
+  getAllDoctors(): Observable<any>{
+    return this.httpClient.get(BASIC_URL + "api/v1/doctor/getAllDoctors", { headers: this.requestHeader });
+  }
+
 
 }
