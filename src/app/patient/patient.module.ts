@@ -11,6 +11,8 @@ import { PatientDashboardComponent } from './components/patient-dashboard/patien
 import { ViewTestComponent } from './components/view-test/view-test.component';
 import { ViewDoctorComponent } from './components/view-doctor/view-doctor.component';
 import { ViewPatientComponent } from './components/view-patient/view-patient.component';
+import { UpdatePatientComponent } from './components/update-patient/update-patient.component';
+import { TestComponent } from './components/test/test.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ViewPatientComponent } from './components/view-patient/view-patient.com
     PatientDashboardComponent,
     ViewTestComponent,
     ViewDoctorComponent,
-    ViewPatientComponent
+    ViewPatientComponent,
+    UpdatePatientComponent,
+    TestComponent
   ],
   imports: [
     CommonModule,

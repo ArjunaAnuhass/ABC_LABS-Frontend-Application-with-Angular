@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Add Doctor</h2>
+
+    <form [formGroup]="patientForm" (ngSubmit)="updatePatient()">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Full Name</mat-label>
+            <input matInput type="text" placeholder="Full Name" formControlName="fullname">
+
+            <mat-error *ngIf="patientForm.get('fullname')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Address</mat-label>
+            <input matInput type="text" placeholder="Address" formControlName="address">
+
+            <mat-error *ngIf="patientForm.get('address')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="patientForm.get('email')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" placeholder="phone" formControlName="phone">
+
+            <mat-error *ngIf="patientForm.get('phone')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+          
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Medical History</mat-label>
+            <input matInput type="text" placeholder="Medical History" formControlName="medicalHistory">
+
+            <mat-error *ngIf="patientForm.get('medicalHistory')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Update Patient</button>
+    </form>
+</div>
+

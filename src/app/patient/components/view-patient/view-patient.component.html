@@ -47,7 +47,7 @@
                 <ng-container matColumnDef="action">
                     <th *matHeaderCellDef> Action </th>
                     <td *matCellDef="let patient">
-                      <button mat-raised-button color="accent" class="update-button" [routerLink]="'' + patient.id">Update</button>
+                      <button mat-raised-button color="accent" class="update-button" [routerLink]="'/patient/updatePatient/' + patient.id">Update</button>
                     </td>
                   </ng-container>
 

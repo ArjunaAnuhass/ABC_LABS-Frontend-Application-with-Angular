@@ -59,7 +59,7 @@ export class LoginComponent {
           this.snackbar.open('Admin Login Success', 'Ok', { duration: 5000});
         }
         else if(role === 'USER'){
-          this.router.navigateByUrl('patient');
+          this.router.navigateByUrl('patient/patientDashboard');
           this.snackbar.open('Patient Login Success', 'Ok', { duration: 5000});
         }
         else if(role === 'TECHNICIAN'){

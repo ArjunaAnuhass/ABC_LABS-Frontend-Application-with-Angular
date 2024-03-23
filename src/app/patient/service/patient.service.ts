@@ -41,5 +41,15 @@ export class PatientService {
     return this.httpClient.get(BASIC_URL + "api/v1/patient/getAllPatients", { headers: this.requestHeader});
   }
 
+  //update Patient
+
+  getAllPatientById(id): Observable<any>{
+    return this.httpClient.get(BASIC_URL + `api/v1/patient/getPatientById/${id}`, { headers: this.requestHeader });
+  }
+
+  updatePatient(id: any, patientDto: any): Observable<any>{
+    return this.httpClient.put(BASIC_URL + `api/v1/patient/updatePatient/${id}`, patientDto, { headers: this.requestHeader });
+  }
+
 
 }
