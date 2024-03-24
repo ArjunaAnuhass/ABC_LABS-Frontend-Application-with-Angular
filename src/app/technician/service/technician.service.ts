@@ -32,4 +32,19 @@ export class TechnicianService {
   getAllResults(): Observable<any>{
     return this.httpClient.get(BASIC_URL + "api/v1/results/getAllResults", { headers: this.requestHeader });
   }
+
+  //update test Results
+
+  getResultsById(id): Observable<any>{
+    return this.httpClient.get(BASIC_URL + `api/v1/results/getResultsById/${id}`, { headers: this.requestHeader });
+  }
+
+  updateTestResuts(id: any, resultsDto: any): Observable<any>{
+    return this.httpClient.put(BASIC_URL + `api/v1/results/updateResults/${id}`, resultsDto, { headers: this.requestHeader });
+  }
+  //end
+
+  deleteResults(id: any): Observable<any>{
+    return this.httpClient.delete(BASIC_URL + `api/v1/results/deleteTestResult/${id}`, { headers: this.requestHeader });
+  }
 }

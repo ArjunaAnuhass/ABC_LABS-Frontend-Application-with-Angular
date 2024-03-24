@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TechnicianService } from '../../service/technician.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-results',
@@ -13,6 +15,8 @@ export class ViewResultsComponent {
 
   constructor (
     private technicianService: TechnicianService,
+    private snackbar: MatSnackBar,
+    private router: Router,
   ) {}
 
   
@@ -27,6 +31,18 @@ export class ViewResultsComponent {
   getAllTestsResults(){
     this.technicianService.getAllResults().subscribe(res => {
       this.resultss = res;
+    })
+  }
+
+  deleteResult(id: any){
+    this.technicianService.deleteResults(id).subscribe(res => {
+      if(res.body == null){
+        this.snackbar.open('Test Result Deleted Sucessfully.', 'Close', { duration: 5000 });
+        this.router.navigateByUrl('technician/getAllResults');
+      }
+      else{
+        this.snackbar.open('Test Result Delete Unsuccessfull! Try Again', 'Close', { duration: 5000, panelClass: 'error-snackbar'});
+      }
     })
   }
 

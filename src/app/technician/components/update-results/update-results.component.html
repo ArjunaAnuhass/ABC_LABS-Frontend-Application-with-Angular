@@ -1,1 +1,43 @@
-<p>update-results works!</p>
+<div class="container">
+    <h2>Update Result</h2>
+
+    <form [formGroup]="resultsForm" (ngSubmit)="updateResults()">
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Test Name</mat-label>
+            <input matInput type="text" placeholder="Test Name" formControlName="testName">
+
+            <mat-error *ngIf="resultsForm.get('testName')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Patient Name</mat-label>
+            <input matInput type="text" placeholder="Patient Name" formControlName="patientName">
+
+            <mat-error *ngIf="resultsForm.get('patientName')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Result</mat-label>
+            <input matInput type="text" placeholder="Result" formControlName="result">
+
+            <mat-error *ngIf="resultsForm.get('result')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Comment</mat-label>
+            <input matInput type="text" placeholder="Comment" formControlName="comment">
+
+            <mat-error *ngIf="resultsForm.get('comment')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Appointment Name</mat-label>
+            <input matInput type="text" placeholder="Appointment Name" formControlName="appointmentName">
+
+            <mat-error *ngIf="resultsForm.get('appointmentName')?.hasError('required')">This input is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Update Test Results</button>
+    </form>
+</div>
