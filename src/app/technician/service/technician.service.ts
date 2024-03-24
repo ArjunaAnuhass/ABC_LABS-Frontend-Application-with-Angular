@@ -28,4 +28,8 @@ export class TechnicianService {
   postResult(resultsDto): Observable<any>{
     return this.httpClient.post(BASIC_URL + "api/v1/results/createResult", resultsDto, { headers: this.requestHeader });
   }
+
+  getAllResults(): Observable<any>{
+    return this.httpClient.get(BASIC_URL + "api/v1/results/getAllResults", { headers: this.requestHeader });
+  }
 }

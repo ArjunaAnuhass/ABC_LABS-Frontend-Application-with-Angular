@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewTestComponent } from './components/view-test/view-test.component';
 import { PostTestComponent } from './components/post-test/post-test.component';
+import { ViewResultsComponent } from './components/view-results/view-results.component';
+import { UpdateResultsComponent } from './components/update-results/update-results.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { PostTestComponent } from './components/post-test/post-test.component';
     TechnicianComponent,
     ViewAppointmentsComponent,
     ViewTestComponent,
-    PostTestComponent
+    PostTestComponent,
+    ViewResultsComponent,
+    UpdateResultsComponent
   ],
   imports: [
     CommonModule,

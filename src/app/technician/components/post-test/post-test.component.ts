@@ -39,7 +39,7 @@ export class PostTestComponent {
         (response) => {
           if(response.id != null){
             this.snackbar.open('Results Added Successfully.', 'Close', { duration: 5000});
-            this.router.navigateByUrl('');
+            this.router.navigateByUrl('technician/getAllResults');
           }
           else{
             this.snackbar.open('Error to add Results!','ERROR', { duration: 5000 });
