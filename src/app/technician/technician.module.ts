@@ -8,13 +8,15 @@ import { DemoAngularMaterialModule } from '../DemoAngularMaterialModule';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ViewTestComponent } from './components/view-test/view-test.component';
+import { PostTestComponent } from './components/post-test/post-test.component';
 
 
 @NgModule({
   declarations: [
     TechnicianComponent,
     ViewAppointmentsComponent,
-    ViewTestComponent
+    ViewTestComponent,
+    PostTestComponent
   ],
   imports: [
     CommonModule,

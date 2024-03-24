@@ -24,4 +24,8 @@ export class TechnicianService {
   getAllTests(): Observable<any>{
     return this.httpClient.get(BASIC_URL + "api/v1/test/getAllTests", { headers: this.requestHeader });
   }
+
+  postResult(resultsDto): Observable<any>{
+    return this.httpClient.post(BASIC_URL + "api/v1/results/createResult", resultsDto, { headers: this.requestHeader });
+  }
 }
