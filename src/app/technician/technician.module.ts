@@ -7,12 +7,14 @@ import { ViewAppointmentsComponent } from './components/view-appointments/view-a
 import { DemoAngularMaterialModule } from '../DemoAngularMaterialModule';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ViewTestComponent } from './components/view-test/view-test.component';
 
 
 @NgModule({
   declarations: [
     TechnicianComponent,
-    ViewAppointmentsComponent
+    ViewAppointmentsComponent,
+    ViewTestComponent
   ],
   imports: [
     CommonModule,

@@ -20,4 +20,8 @@ export class TechnicianService {
   getAllAppointments(): Observable<any>{
     return this.httpClient.get(BASIC_URL + "api/v1/appointment/getAllAppointments", { headers: this.requestHeader });
   }
+
+  getAllTests(): Observable<any>{
+    return this.httpClient.get(BASIC_URL + "api/v1/test/getAllTests", { headers: this.requestHeader });
+  }
 }
