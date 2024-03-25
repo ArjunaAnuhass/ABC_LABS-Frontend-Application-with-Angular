@@ -7,6 +7,7 @@ import { PostTestComponent } from './components/post-test/post-test.component';
 import { ViewResultsComponent } from './components/view-results/view-results.component';
 import { UpdateResultsComponent } from './components/update-results/update-results.component';
 import { ViewDoctorsComponent } from './components/view-doctors/view-doctors.component';
+import { ViewPatientsComponent } from './components/view-patients/view-patients.component';
 
 const routes: Routes = [
   { path: '', component: TechnicianComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'getAllResults', component: ViewResultsComponent},
   { path: 'updateResults/:id', component: UpdateResultsComponent},
   { path: 'viewDoctors', component: ViewDoctorsComponent},
+  { path: 'viewPatients', component: ViewPatientsComponent},
 ];
 
 @NgModule({

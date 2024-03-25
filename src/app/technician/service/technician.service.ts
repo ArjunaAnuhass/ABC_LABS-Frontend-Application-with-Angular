@@ -51,4 +51,8 @@ export class TechnicianService {
   getAllDoctors(): Observable<any>{
     return this.httpClient.get(BASIC_URL + "api/v1/doctor/getAllDoctors", { headers: this.requestHeader });
   }
+
+  getAllPatients(): Observable<any>{
+    return this.httpClient.get(BASIC_URL + "api/v1/patient/getAllPatients", { headers: this.requestHeader });
+  }
 }
