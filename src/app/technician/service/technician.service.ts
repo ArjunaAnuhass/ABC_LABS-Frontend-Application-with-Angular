@@ -47,4 +47,8 @@ export class TechnicianService {
   deleteResults(id: any): Observable<any>{
     return this.httpClient.delete(BASIC_URL + `api/v1/results/deleteTestResult/${id}`, { headers: this.requestHeader });
   }
+
+  getAllDoctors(): Observable<any>{
+    return this.httpClient.get(BASIC_URL + "api/v1/doctor/getAllDoctors", { headers: this.requestHeader });
+  }
 }

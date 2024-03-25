@@ -6,6 +6,7 @@ import { ViewTestComponent } from './components/view-test/view-test.component';
 import { PostTestComponent } from './components/post-test/post-test.component';
 import { ViewResultsComponent } from './components/view-results/view-results.component';
 import { UpdateResultsComponent } from './components/update-results/update-results.component';
+import { ViewDoctorsComponent } from './components/view-doctors/view-doctors.component';
 
 const routes: Routes = [
   { path: '', component: TechnicianComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'postTest', component: PostTestComponent},
   { path: 'getAllResults', component: ViewResultsComponent},
   { path: 'updateResults/:id', component: UpdateResultsComponent},
+  { path: 'viewDoctors', component: ViewDoctorsComponent},
 ];
 
 @NgModule({

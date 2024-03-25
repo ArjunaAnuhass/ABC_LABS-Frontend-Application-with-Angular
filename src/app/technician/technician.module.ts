@@ -11,6 +11,7 @@ import { ViewTestComponent } from './components/view-test/view-test.component';
 import { PostTestComponent } from './components/post-test/post-test.component';
 import { ViewResultsComponent } from './components/view-results/view-results.component';
 import { UpdateResultsComponent } from './components/update-results/update-results.component';
+import { ViewDoctorsComponent } from './components/view-doctors/view-doctors.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { UpdateResultsComponent } from './components/update-results/update-resul
     ViewTestComponent,
     PostTestComponent,
     ViewResultsComponent,
-    UpdateResultsComponent
+    UpdateResultsComponent,
+    ViewDoctorsComponent
   ],
   imports: [
     CommonModule,
