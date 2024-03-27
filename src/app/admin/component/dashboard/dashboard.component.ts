@@ -51,7 +51,7 @@ export class DashboardComponent {
 
   deleteTest(testId: any){
     this.adminService.deleteTest(testId).subscribe(res => {
-      if(res.body == null){
+      if(res.value === null){
         this.snackbar.open('Test Delete Sucessfully.', 'Close', { duration: 5000 });
         return this.getAllTests();
       }
